@@ -13,11 +13,11 @@ public class Task3 {
         System.out.println("Write third value");
         thirdValue = scanner.nextInt();
 
-        firstValue = Math.abs(firstValue) < Math.abs(secondValue) ? Math.abs(firstValue) : Math.abs(thirdValue);
-        System.out.println(Math.abs(firstValue));
-        secondValue = Math.abs(secondValue) < Math.abs(firstValue) ? Math.abs(secondValue) : Math.abs(thirdValue);
-        System.out.println(Math.abs(secondValue));
-        System.out.println(Math.abs(thirdValue));
+        int min = Math.abs(firstValue) > Math.abs(secondValue) ? Math.abs(thirdValue) < Math.abs(firstValue) ?
+                Math.abs(firstValue) : Math.abs(thirdValue) > Math.abs(secondValue) ? Math.abs(secondValue) :
+                Math.abs(thirdValue) : Math.abs(thirdValue) < Math.abs(secondValue) ? Math.abs(secondValue) :
+                Math.abs(thirdValue) > Math.abs(firstValue) ? Math.abs(firstValue) : Math.abs(thirdValue);
+        System.out.println("Минимальное по модулю = " + min);
     }
 }
 
