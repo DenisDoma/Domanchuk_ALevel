@@ -1,3 +1,5 @@
+package ua.domanchuk.hw2;
+
 public class Task1 {
     public static void main(String[] args) {
         double x1 = 7;
