@@ -1,27 +1,36 @@
 package ua.domanchuk.hw2;
 
-import java.util.Scanner;
-
 public class Task3 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int firstValue = 0;
-        int secondValue = 0;
-        int thirdValue = 0;
-        System.out.println("Write first value");
-        firstValue = scanner.nextInt();
-        System.out.println("Write second value");
-        secondValue = scanner.nextInt();
-        System.out.println("Write third value");
-        thirdValue = scanner.nextInt();
+        smallestValue(6, 8, 4);
 
-        int min = Math.abs(firstValue) > Math.abs(secondValue) ? Math.abs(thirdValue) < Math.abs(firstValue) ?
-                Math.abs(firstValue) : Math.abs(thirdValue) > Math.abs(secondValue) ? Math.abs(secondValue) :
-                Math.abs(thirdValue) : Math.abs(thirdValue) < Math.abs(secondValue) ? Math.abs(secondValue) :
-                Math.abs(thirdValue) > Math.abs(firstValue) ? Math.abs(firstValue) : Math.abs(thirdValue);
-        System.out.println("Минимальное по модулю = " + min);
+    }
+
+    public static void smallestValue(int firstValue, int secondValue, int thirdValue) {
+        int absValue1 = (firstValue < 0) ? firstValue * -1 : firstValue;
+        int absValue2 = (secondValue < 0) ? secondValue * -1 : secondValue;
+        int absValue3 = (thirdValue < 0) ? thirdValue * -1 : thirdValue;
+        if (absValue1 < absValue2 && absValue1 < absValue3) {
+            System.out.println("Минимальное значение " + firstValue);
+        } else if (absValue2 < absValue1 && absValue2 < absValue3) {
+            System.out.println("Минимальное значение " + secondValue);
+        } else {
+            System.out.println("Минимальное значение " + thirdValue);
+        }
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
