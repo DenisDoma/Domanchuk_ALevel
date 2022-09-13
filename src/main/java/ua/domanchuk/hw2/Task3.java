@@ -2,7 +2,7 @@ package ua.domanchuk.hw2;
 
 public class Task3 {
     public static void main(String[] args) {
-        smallestValue(6, 8, 4);
+        smallestValue(6, -5, 45);
 
     }
 
