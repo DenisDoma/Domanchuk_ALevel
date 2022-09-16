@@ -19,7 +19,6 @@ public static void fillArray(int [] randomNums){
             randomNums[i] = random.nextInt(10);
         }
     }
-
     public static int getArrayAverage(int[] randomNums) {
         int sum = 0;
         int average;
