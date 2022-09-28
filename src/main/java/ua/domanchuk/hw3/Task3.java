@@ -10,11 +10,11 @@ public class Task3 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Напишите что-то в одну строку");
         String firstLine = scanner.nextLine();
-        countingWords(firstLine);
+        System.out.println("Вы ввели " + countingWords(firstLine) + " слов(а)");
 
     }
 
-    static void countingWords(String firstLine) {
+    public static int countingWords(String firstLine) {
         int count = 0;
         if (firstLine.length() != 0) {
             count++;
@@ -24,7 +24,7 @@ public class Task3 {
                 }
             }
         }
-        System.out.println("Вы написали " + count + " слов(а)");
+        return count;
     }
 
 }

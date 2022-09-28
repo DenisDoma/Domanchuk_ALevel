@@ -15,19 +15,21 @@ public class Task2 {
         Scanner in = new Scanner(System.in);
         System.out.print("Пропишите строку:");
         String firstLine = in.nextLine();
-        String fixLine = firstLine.replaceAll(" ", "");
-        System.out.println(fixLine);
-        System.out.println(palindromeWords(fixLine));
+        System.out.println(palindromeWords(wordsWithoutSpaces(firstLine)));
     }
 
-    static boolean palindromeWords(String fixLine) {
-        for (int i = 0; i < (fixLine.length() / 2); i++) {
-            if (fixLine.charAt(i) != fixLine.charAt(fixLine.length() - i - 1)) {
-                System.out.println(fixLine + " Это не паллиндром");
+    static public String wordsWithoutSpaces(String fixLine) {
+        return fixLine.replaceAll(" ", "");
+    }
+
+    static boolean palindromeWords(String finalLine) {
+        for (int i = 0; i < (finalLine.length() / 2); i++) {
+            if (finalLine.charAt(i) != finalLine.charAt(finalLine.length() - i - 1)) {
+                System.out.println(finalLine + " Это не паллиндром");
                 return false;
             }
         }
-        System.out.println(fixLine + " Это паллиндром");
+        System.out.println(finalLine + " Это паллиндром");
         return true;
     }
 }
