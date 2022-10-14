@@ -14,6 +14,7 @@ public class Task1 {
     public static void main(String[] args) {
         int[][] array = new int[5][5];
         fillArray(array);
+        System.out.println(Arrays.deepToString(array));
     }
     public static int[][] fillArray(int[][] array) {
         int k = 0;
@@ -24,7 +25,6 @@ public class Task1 {
                 if (i % 2 != 0)
                     array[i][j] = k * (-1);
             }
-            System.out.println(Arrays.toString(array[i]));
         }
         return array;
     }
