@@ -7,19 +7,16 @@ import java.util.Arrays;
 
 public class Task2 {
     public static void main(String[] args) {
-        int[][] array = {{600, 550, 500}, {499, 498, 497},
-                         {450, 400, 350}, {349, 348, 347}};
-        System.out.println(Arrays.deepToString(array));
+        int[] array = {600, 590, 500, 499, 498, 497, 496, 449, 448};
+        System.out.println(Arrays.toString(array));
         System.out.println(checkNextElement(array));
     }
 
-    public static boolean checkNextElement(int[][] array) {
+    public static boolean checkNextElement(int[] array) {
         for (int i = 1; i < array.length; i++) {
-            for (int k = 1; k < array[i].length; k++) {
-                if (array[i][k] > array[i - 1][k - 1]) {
-                    System.out.println("Массив не упорядочен по невозрастанию");
-                    return false;
-                }
+            if (array[i] > array[i - 1]) {
+                System.out.println("Массив не упорядочен по невозрастанию");
+                return false;
             }
         }
         System.out.println("Массив упорядочен по невозрастанию");
